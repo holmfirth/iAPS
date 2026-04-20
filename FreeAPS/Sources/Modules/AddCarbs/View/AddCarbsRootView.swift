@@ -198,9 +198,6 @@ extension AddCarbs {
                 }
 
                 Section {
-                    // Saved Food presets
-                    mealPresets.padding(.vertical, 9)
-
                     HStack {
                         Text("Carbs").fontWeight(.semibold)
                         Spacer()
@@ -682,8 +679,6 @@ extension AddCarbs {
             } else {
                 return false // Allow swipe in other cases
             }
-            .sheet(isPresented: $state.edit, content: { editView })
-            .environment(\.colorScheme, colorScheme)
         }
 
         /// Handles the dismiss action from the Cancel/Done button
